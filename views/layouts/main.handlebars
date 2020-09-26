@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>WebOne</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <script src= '/js/bootstrap.js'></script>
+    <script src='/js/Jquery.js'></script>
+    {{#if showTests}}
+        <link rel="stylesheet" href="/vendor/mocha.css">
+    {{/if}}
+</head>
+<body>
+    <header><img src="/img/logo.png" class="img-responsive" alt="WebOne Logo" width= "50px" height="50px"></header>
+    <div class= "col-lg-12">
+        <ul class= "nav nav-pills col-lg-offset-1">
+            <li class="active"><a href= #>Home</a></li>
+            <li><a href= #>About Us</a></li>
+            <li><a href= #>Service</a></li>
+            <li><a href= #>Contact Us</a></li>
+        </ul>
+    </div>
+    {{{body}}}
+    {{#if showTests}}
+        <div id="mocha"></div>
+        <script src="/vendor/mocha.js"></script>
+        <script src="/vendor/chai.js"></script>
+        <script>
+        mocha.ui('tdd');
+        var assert = chai.assert;
+        </script>
+        <script src="/qa/tests-global.js"></script>
+        {{#if pageTestScript}}
+            <script src="{{pageTestScript}}"></script>
+        {{/if}}
+            <script>mocha.run();</script>
+    {{/if}}    
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "webone-root",
+  "version": "1.0.0",
+  "description": "First website",
+  "main": "webone.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dapo",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "connect": "^3.7.0",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "express-session": "^1.16.1",
+    "express3-handlebars": "^0.5.2",
+    "json": "^9.0.6",
+    "nodemailer": "^6.2.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "grunt": "^1.0.4",
+    "mocha": "^6.1.4",
+    "zombie": "^6.1.4"
+  }
+}
